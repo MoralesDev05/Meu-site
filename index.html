@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MindBridge Integrated Center</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+   <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #ffffff;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+header h1 {
+    color: #2e7d32;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #1b5e20;
+}
+
+/* SECTIONS */
+section {
+    padding: 110px 6% 80px;
+}
+
+/* HOME (HERO) */
+.home {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e8f5e9, #ffffff);
+    display: flex;
+    align-items: center;
+}
+.home-tag {
+    color: #1b5e20;
+}
+
+.home-content {
+    max-width: 700px;
+}
+
+.home h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1b5e20;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.home p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.home .cta {
+    display: inline-block;
+    background: #4CAF50;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.home .cta:hover {
+    background: #2e7d32;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.about img {
+    width: 320px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+/* SERVICES */
+.services {
+    background: #f1f8f4;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #2e7d32;
+    margin-bottom: 40px;
+}
+
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.service {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.service i {
+    font-size: 32px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+.contact-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-contact, .btn-whatsapp {
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-contact {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: #fff;
+}
+
+/* FOOTER */
+footer {
+    background: #e8f5e9;
+    text-align: center;
+    padding: 20px;
+    color: #2e7d32;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .home {
+        text-align: center;
+    }
+
+    .home h2 {
+        font-size: 34px;
+    }
+
+    .home p {
+        font-size: 16px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* MENU MOBILE */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #2e7d32;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: row;
+    }
+
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 0;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: 0.3s;
+    }
+
+    nav.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>MindBridge</h1>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav id="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<section id="home" class="home">
+    <div class="home-content">
+       
+
+        <h2>
+            Supporting Mental Health<br>
+            With Compassion & Care
+        </h2>
+        <span class="home-tag"><h3>Our Mission</h3></span>
+        <p>
+            We are committed to supporting mental health and emotional well-being through
+            compassionate, accessible, and client-centered counseling services. Our mission
+            is to empower individuals, families, and communities to grow emotionally,
+            build resilience, and improve quality of life.
+        </p>
+
+        <a href="#contact" class="cta">Get in Touch</a>
+    </div>
+</section>
+
+
+
+<section id="about" class="about">
+    <img src="foto.jpeg" alt="Psychologist Photo">
+    <div class="about-text">
+        <h2>About</h2>
+        <p>
+            Ms. Elen Renata Gomes Pereira is a licensed psychologist with a Bachelor’s in Psychology from UNIP, São Paulo.
+        </p>
+        <p>
+            She provides compassionate counseling and therapeutic care for children, adolescents, and adults, offering individual sessions, group support, and creative workshops that promote mental health, emotional growth, and overall well-being.
+        </p>
+        <p><strong>License number:</strong> CRP 130107</p>
+    </div>
+</section>
+
+<section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-list">
+
+        <div class="service">
+            <i class="fa-solid fa-user"></i>
+            <h3>Individual Counseling</h3>
+            <p>Personalized support for emotional well-being, stress, anxiety, relationships, and life challenges.</p>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-child"></i>
+            <h3>Neurodivergent Children Therapy</h3>
+            <p>Play-based therapeutic support focused on emotional regulation and communication skills.</p>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-people-group"></i>
+            <h3>Support Groups</h3>
+            <p>Safe group spaces that encourage connection and shared emotional growth.</p>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-palette"></i>
+            <h3>Creative Arts Programs</h3>
+            <p>Therapeutic workshops using art to promote self-expression and emotional balance.</p>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-futbol"></i>
+            <h3>Sports-Based Activities</h3>
+            <p>Activities designed to build confidence and mental well-being through movement and play.</p>
+        </div>
+
+        <div class="service">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Mental Health Workshops</h3>
+            <p>Educational workshops focused on awareness, self-care, and emotional development.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Feel free to contact us with any questions or concerns.</p>
+
+    <div class="contact-buttons">
+        <a href="tel:+18622559352" class="btn-contact">
+            <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+
+        <a href="https://wa.me/18622559352" target="_blank" class="btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+    </div>
+</section>
+
+<footer>
+    © 2026 MindBridge Integrated Center
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+
+    menuToggle.addEventListener("click", function () {
+        navMenu.classList.toggle("active");
+    });
+
+    // Fecha ao clicar no link
+    document.querySelectorAll("#nav-menu a").forEach(link => {
+        link.addEventListener("click", function () {
+            navMenu.classList.remove("active");
+        });
+    });
+
+});
+</script>
+
+</body>
+</html>
