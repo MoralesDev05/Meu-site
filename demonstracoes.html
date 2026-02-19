@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrações - EA Esmalteria</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+
+<style>
+:root{
+  --rosa:#e8a1b2;
+  --rosa-escuro:#d87c96;
+  --offwhite:#faf7f5;
+  --texto:#444;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background: linear-gradient(
+    135deg,
+    #fff6f8 0%,
+    #fbeaec 40%,
+    #f8dce2 100%
+  );
+  color:var(--texto);
+  min-height:100vh;
+}
+
+/* ===== HEADER ===== */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#fff;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+  z-index:1000;
+}
+
+header h1{
+  font-family:'Playfair Display', serif;
+  font-weight:600;
+  color:var(--rosa-escuro);
+}
+
+
+.btn-voltar{
+  text-decoration:none;
+  background:var(--rosa-escuro);
+  color:#fff;
+  padding:10px 25px;
+  border-radius:30px;
+  font-weight:500;
+  transition:.3s;
+}
+
+.btn-voltar:hover{
+  background:var(--rosa);
+  transform:translateY(-2px);
+}
+
+/* ===== CONTEÚDO ===== */
+main{
+  padding:120px 10% 80px;
+}
+
+.titulo{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.titulo h2{
+  font-family:'Playfair Display',serif;
+  font-size:2.3rem;
+  color:var(--rosa-escuro);
+}
+
+/* ===== GALERIA ===== */
+.galeria{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
+
+.galeria img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 15px 30px rgba(0,0,0,.1);
+  transition:.4s;
+  cursor:pointer;
+}
+
+.galeria img:hover{
+  transform:scale(1.05);
+  box-shadow:0 25px 45px rgba(0,0,0,.18);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>EA Esmalteria</h1>
+  <a href="index.html" class="btn-voltar">Voltar</a>
+</header>
+
+<main>
+  <div class="titulo">
+    <h2>Demonstrações</h2>
+  </div>
+
+  <div class="galeria">
+    <img src="imagens/unha1.jpeg" alt="Unhas 1">
+    <img src="imagens/unha2.jpeg" alt="Unhas 2">
+    <img src="imagens/unha3.jpeg" alt="Unhas 3">
+    <img src="imagens/unha4.jpeg" alt="Unhas 4">
+    <img src="imagens/unha5.jpeg" alt="Unhas 5">
+  </div>
+</main>
+
+</body>
+</html>
